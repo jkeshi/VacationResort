@@ -1,61 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plan Your Stay</title>
-    <style>
-        body
-        </style>
-</head>
-<body>
-    <header>Please Fill Out</header>
+    <link rel="stylesheet" href="styleCss/style.css">
+    <link rel="stylesheet" href="index.html">
+    </head>
+  <body>
+<h1>Plan Your Stay</h1>
+   <ul class="nav nav-pills">
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">overnight stay</a></li>
+          <li><a class="dropdown-item" href="#">Dining</a></li>
+          <li><a class="dropdown-item" href="index.html">Home</a></li>
+          <li><a class="dropdown-item" href="plan_your_stay_index.htm"class="nav-link">Plan Your Stay</a></li>
+          <li><a</li>
+        </ul>
+    
+    <header>Please Fill Out The Information</header>
     <h1>Options For Your Staying</h1>
     <form action="">
-    <label for="fullName">Full Name:</label>
-    <input type="text" name="fullName" id="fullName">
+        
+      <label for="fullName">Full Name:</label>
+      <input required type="text" name="fullName" id="fullName" />
 
-    <label for="Email">Your Email:</label>
-    <input type="text" name="Email"id="Email">
+      <label for="Email">Your Email:</label>
+      <input required type="text" name="email" id="email" />
 
-    <label type="number">choose A Date</label>
-     <input type="date" name="chooseADate" id="choose-a-date"> 
+      <label type="number">Choose A Date</label>
+      <input type="date" name="chooseADate" id="choose-a-date" />
+
+      <label for="numberOfNights">Number of nights</label>
+      <input 
+        type="number"
+        name="numberOfNights"
+        id="numberOfNights"
+        min="1"
+        max="28"
+      />
+
+      <fieldset>
+        <legend>Room Type:</legend>
+        <input
+          type="radio"
+          id="King"
+          name="roomSelection"
+          value="king"
+          checked
+        />King
+        <input
+          type="radio"
+          id="Queen"
+          name="roomSelection"
+          value="queen"
+        />Queen
+        <input
+          type="radio"
+          id="2-bedroom-suite"
+          name="roomSelection"
+          value="suite"
+        />2 Bedroom Suite
+      </fieldset>
+
+      <label for="numberOfAdults">Number Of Adults</label>
+      <select name="numberOfAdults" id="numberOfAdults">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <label for="numberOfChildren">Number Of Children</label>
+      <select name="numberOfChildren" id="numberOfChildren">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <fieldset>
+        <label for="discountType">Discount</label>
+        <input type="radio" name="discount" id="none" /> None<br />
+        <input type="radio" name="discount" id="Senior" /> AAA/Senior<br />
+        <input type="radio" name="discount" id="Military" /> Military<br />
+        <input type="radio" name="discount" id="underTwo" /> Children Under
+        Two<br />
+      </fieldset>
+      <button type="submit" onclick="estimate();" onmouseover="log();">
+        submit
+      </button>
     </form>
-
-    <label for ="numberOfNights">Number of nights</label>
-    <input type="number" name="numberOfNights" id="numberOfNights" min="1" max="28">
-
-     <fieldset>
-        <legend>Room Type:<legend>
-         <input type="radio" id="King" name="roomSelection" value="King">king!</legend>
-         <input type="radio" id="Queen" name="roomSelection" value="Queen">Queen!</label>
-         <input type="radio" id="2-bedroom-suite" name="roomSelection" value="2-beedroom-suite">2Bedroom Suite</label>
-     </fieldset>
-
-     <label for="numberOfAdults">Number Of Adults</label>
-        <select name="numberOfAdults" id="numberOfAdults">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        </select>
-
-        <label for="numberOfChildren">Number Of Children</label>
-        <select name="numberOfChildren" id="numberOfChildren">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        </select>
-
-     <fieldset>
-     <label for="discountType">Discount</label>
-     <input type="radio" name="discount" id="none"> None<br>
-     <input type="radio" name="discount" id="Senior"> AAA/Senior<br>
-     <input type="radio" name="discount" id="Military"> Military<br>
-     <input type="radio" name="discount" id="underTwo"> Children Under Two<br>
-     </fieldset>
-    
-</body>
+    <table style="width: 100%">
+      <tr>
+        <th>Room Type</th>
+        <th>Max Occupancy</th>
+        <th>July-May Per Night</th>
+        <th>Novermber-January Per Night</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Queen</td>
+        <td>5</td>
+        <td>250</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>King</td>
+        <td>2</td>
+        <td>250</td>
+        <td>150</td>
+      </tr>
+      <tr>
+        <td>Suite</td>
+        <td>6</td>
+        <td>350</td>
+        <td>210</td>
+      </tr>
+      <tr></tr>
+    </table>
+  </body>
 </html>

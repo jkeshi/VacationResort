@@ -1,19 +1,10 @@
 "use strict";
 
-function estimate() {
-  console.log("clicked");
-  const emailElement = Document.getElementById("emailElement").value;
-}
-function log() {
-  console.log("over");
-}
-{
+function estumateBtnClicked() {
   const checkInDate = new Date(Document.getElementById("checkInDate").value);
   const numberOfNight = Document.getElementById("numberOfNights").value;
 
-  let roomType = document.querySelector(
-    "input[name='roomSelection']:checked"
-  ).value;
+  let roomType = document.querySelector("input[name='roomSelection']:checked").value;
   let currentMonth = checkInDate.getMonth();
   let inSeason = false;
   let price = 0;
@@ -27,12 +18,12 @@ function log() {
       inSeason = false;
       break;
   }
-  if (inSeason && (roomType == "queen" || roomType == "king")) {
+
+  if (inSeason && (roomType == "queen" || roomType == 'king')) {
     price = 250 * numberOfNight;
   } else if (!inSeason && (roomType == "queen" || roomType == "king")) {
     price = 150 * numberOfNight;
   }
-  
-}
 
-let btnGet;
+
+}
