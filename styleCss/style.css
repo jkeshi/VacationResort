@@ -1,7 +1,14 @@
+html,body
+{
+background-image: url("../safari.jpg");
+background-repeat:no-repeat;
+background-size: cover;
+}
+
+
 * {
   text-align: left;
-  background-color: antiquewhite;
-  color: rgb(201, 51, 51);
+  color: rgb(18, 246, 227);
 }
 
 div {
@@ -19,13 +26,24 @@ table {
 
 th,
 td {
-  background-color: rgb(232, 220, 220);
-    border: 1px solid rgb(5, 4, 4);
+ background-color: rgb(192, 187, 183);
+    border: 1px solid rgb(49, 34, 34);
   padding: 2px;
-  color: rgb(0, 0, 0)
+  color: rgb(137, 87, 87)
 }
 th{
-    background-color: rgb(220, 210, 209);
+    background-color: rgb(215, 208, 205);
 }
+
+*
+{
+color: rgba(64, 100, 154, 0.358);
+}
+
+p {
+  font-family:verdana;
+ 
+}
+
 
 
