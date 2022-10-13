@@ -8,7 +8,7 @@ background-size: cover;
 
 * {
   text-align: left;
-  color: rgb(18, 246, 227);
+  color: rgb(3, 3, 28);
 }
 
 div {
@@ -35,14 +35,10 @@ th{
     background-color: rgb(215, 208, 205);
 }
 
-*
-{
-color: rgba(64, 100, 154, 0.358);
-}
 
 p {
   font-family:verdana;
- 
+ background:#773306 ; 
 }
 
 
